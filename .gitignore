@@ -144,6 +144,7 @@ venv.bak/
 # datasets
 data/raw/
 *.sqlite
+data/processed
 # mypy
 .mypy_cache/
 .dmypy.json
