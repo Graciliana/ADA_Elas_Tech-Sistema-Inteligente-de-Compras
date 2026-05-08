@@ -403,7 +403,7 @@ Este projeto foi desenvolvido com muito carinho e dedicação por um grupo de mu
 | Carla Oliveira     | [@Carla Oliveira](https://github.com/carlaoliveiraads)     | https://www.linkedin.com/in/carla-oliveira-ads/          |
 | Franciele Oliveira | [@Franciele01000110](https://github.com/Franciele01000110) | https://www.linkedin.com/in/franciele-oliveira-b02296211 |
 | Graciliana Kascher | [@Graciliana](https://github.com/Graciliana)               | https://www.linkedin.com/in/gracilianakascher/           |
-| Nivea Oliveira     |                                                            | https://www.linkedin.com/in/niveaaoliveira               |
+| Nivea Oliveira     | [@niveaaoliveira](https://github.com/niveaaoliveira)       | https://www.linkedin.com/in/niveaaoliveira               |
 
 ---
 
