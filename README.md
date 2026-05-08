@@ -1,8 +1,16 @@
-﻿# 🛒 Sistema Inteligente de Compras com Machine Learning
+﻿<h1 align="center">
+Sistema Inteligente de Compras com Machine Learning
+</h1>
+
+<p align="center">
+Machine Learning • Forecasting • Supply Chain • Analytics
+</p>
 
 > Um sistema inteligente para previsão de demanda, monitoramento de ruptura de estoque e identificação de overstock utilizando Ciência de Dados, Machine Learning e Streamlit.
 
-### ADA Tech · Elas Tech · Hackathon de Análise de Dados
+<h3 align="center"> 
+ADA Tech · Elas Tech · Hackathon de Análise de Dados
+</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -277,6 +285,8 @@ data/
 └── olist.sqlite
 └── processed/
 
+> ⚠️ O dataset não está versionado no repositório devido ao tamanho do arquivo.
+
 ---
 
 ## 2️⃣ Clonar o repositório
@@ -387,13 +397,13 @@ Durante o hackathon, o time enfrentou e superou desafios reais de ciência de da
 
 Este projeto foi desenvolvido com muito carinho e dedicação por um grupo de mulheres participantes do programa **ADA Tech · Elas Tech** — uma iniciativa que acredita no poder da tecnologia como ferramenta de transformação e inclusão.
 
-| Nome               | GitHub                                                 | Linkedin                                                 |
-| ------------------ | ------------------------------------------------------ | -------------------------------------------------------- |
-| Beatriz Porto      | [@mpbeatriz](https://github.com/mpbeatriz)             | https://www.linkedin.com/in/beatriz-de-m-porto/          |
-| Carla Oliveira     | [@Carla Oliveira](https://github.com/carlaoliveiraads) | https://www.linkedin.com/in/carla-oliveira-ads/          |
-| Franciele Oliveira | [@](https://github.com/Franciele01000110)                                                   | https://www.linkedin.com/in/franciele-oliveira-b02296211 |
-| Graciliana Kascher | [@Graciliana](https://github.com/Graciliana)           | https://www.linkedin.com/in/gracilianakascher/           |
-| Nivea Oliveira     |                                                        | https://www.linkedin.com/in/niveaaoliveira               |
+| Nome               | GitHub                                                     | Linkedin                                                 |
+| ------------------ | ---------------------------------------------------------- | -------------------------------------------------------- |
+| Beatriz Porto      | [@mpbeatriz](https://github.com/mpbeatriz)                 | https://www.linkedin.com/in/beatriz-de-m-porto/          |
+| Carla Oliveira     | [@Carla Oliveira](https://github.com/carlaoliveiraads)     | https://www.linkedin.com/in/carla-oliveira-ads/          |
+| Franciele Oliveira | [@Franciele01000110](https://github.com/Franciele01000110) | https://www.linkedin.com/in/franciele-oliveira-b02296211 |
+| Graciliana Kascher | [@Graciliana](https://github.com/Graciliana)               | https://www.linkedin.com/in/gracilianakascher/           |
+| Nivea Oliveira     |                                                            | https://www.linkedin.com/in/niveaaoliveira               |
 
 ---
 
