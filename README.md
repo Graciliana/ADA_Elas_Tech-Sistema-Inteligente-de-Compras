@@ -1,4 +1,6 @@
-﻿# 🛒 Sistema Inteligente de Compras com Machine Learning
+﻿<h1 align="center" style="color:#50e550;">
+📦 Sistema Inteligente de Compras com Machine Learning
+</h1>
 
 > Um sistema inteligente para previsão de demanda, monitoramento de ruptura de estoque e identificação de overstock utilizando Ciência de Dados, Machine Learning e Streamlit.
 
