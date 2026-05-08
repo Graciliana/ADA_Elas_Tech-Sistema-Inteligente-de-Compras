@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿<h1 align="center">
 Sistema Inteligente de Compras com Machine Learning
 </h1>
@@ -6,12 +6,7 @@ Sistema Inteligente de Compras com Machine Learning
 <p align="center">
 Machine Learning • Forecasting • Supply Chain • Analytics
 </p>
-=======
-﻿<h1 align="center" style="color:#50e550;">
-📦 Sistema Inteligente de Compras com Machine Learning
-</h1>
->>>>>>> d015c969ccd282d09d27abc1ee4a3e460cc9d7fc
-
+﻿
 > Um sistema inteligente para previsão de demanda, monitoramento de ruptura de estoque e identificação de overstock utilizando Ciência de Dados, Machine Learning e Streamlit.
 
 <h3 align="center"> 
