@@ -1,4 +1,7 @@
-﻿# 🛒 Sistema Inteligente de Compras
+﻿# 🛒 Sistema Inteligente de Compras com Machine Learning
+
+> Um sistema inteligente para previsão de demanda, monitoramento de ruptura de estoque e identificação de overstock utilizando Ciência de Dados, Machine Learning e Streamlit.
+
 ### ADA Tech · Elas Tech · Hackathon de Análise de Dados
 
 <p align="center">
@@ -11,187 +14,403 @@
 
 ---
 
-## 📖 Nossa História — O Storytelling do Projeto
+## Objetivo do Projeto
 
-> *"Como consumidores, todos já nos perguntamos: estou pagando um preço justo por isso?"*
+> Este projeto foi desenvolvido com o objetivo de construir um sistema inteligente capaz de apoiar decisões operacionais relacionadas a:
 
-A ideia nasceu de uma dor real e cotidiana: a dificuldade de tomar decisões de compra inteligentes sem ter acesso a dados organizados e contextualizados. Em um cenário de alta inflação e tantas opções de produtos, o consumidor muitas vezes compra por impulso ou sem comparação de preços.
+- previsão de demanda
+- gestão de estoque
+- prevenção de ruptura
+- redução de overstock
+- recomendação inteligente de compras
 
-**Nossa missão foi clara desde o início:** transformar dados brutos de compras em inteligência acionável — uma ferramenta que não apenas informa, mas orienta.
+O sistema utiliza técnicas de:
 
-Durante o hackathon, construímos uma jornada em três atos:
+- análise de dados
+- feature engineering
+- machine learning
+- forecasting
+- visualização de dados
 
-**Ato 1 — A Exploração:** mergulhamos nos dados, descobrindo padrões, anomalias e oportunidades escondidas nos registros de compras. Cada coluna do dataset contou uma história.
-
-**Ato 2 — A Análise:** com Python e Pandas, transformamos observações em insights. Identificamos tendências de preço, categorias mais relevantes, comportamentos de compra e muito mais.
-
-**Ato 3 — A Solução:** materializamos tudo isso em uma aplicação web interativa com Streamlit — acessível, visual e prática para qualquer pessoa, sem precisar ser especialista em dados.
-
-O resultado é um **Sistema Inteligente de Compras**: uma plataforma que coloca o poder da análise de dados nas mãos do consumidor.
-
----
-
-## 🎯 Sobre o Projeto
-
-O **Sistema Inteligente de Compras** é uma solução desenvolvida durante o hackathon do programa **ADA Tech · Elas Tech**, voltado para o empoderamento de mulheres na tecnologia. O projeto combina análise exploratória de dados, visualizações interativas e uma interface amigável para auxiliar na tomada de decisão de compra.
-
-### Principais objetivos:
-- Analisar padrões e tendências em dados de compras
-- Identificar oportunidades de economia para o consumidor
-- Disponibilizar insights de forma visual e acessível via dashboard interativo
-- Demonstrar a aplicação prática de ciência de dados no cotidiano
+para transformar dados históricos em decisões operacionais inteligentes.
 
 ---
 
-## 🗂️ Estrutura do Repositório
+## Problema de Negócio
+
+Empresas que trabalham com estoque enfrentam desafios como:
+
+- falta de produtos (ruptura)
+- excesso de estoque (overstock)
+- capital parado
+- desperdício operacional
+- baixa previsibilidade de demanda
+
+Este projeto busca minimizar esses problemas através de modelos preditivos e analytics.
+
+---
+
+## Solução Desenvolvida
+
+O sistema realiza:
+
+✅ previsão de demanda por produto
+✅ monitoramento de risco de ruptura
+✅ identificação de excesso de estoque
+✅ recomendações inteligentes de compra
+✅ dashboard interativo para tomada de decisão
+
+---
+
+## Funcionalidades
+
+### Previsão de Demanda
+
+- previsão de vendas futuras
+- análise temporal
+- comparação real vs previsto
+
+### Monitoramento de Ruptura
+
+- identificação de produtos críticos
+- risco percentual de ruptura
+- priorização operacional
+
+### Overstock
+
+- detecção de excesso de estoque
+- produtos com baixo giro
+- redução de compras
+
+### Recomendações Inteligentes
+
+- Compra Urgente
+- Reposição Moderada
+- Reduzir Compras
+- Estoque Saudável
+
+---
+
+## Arquitetura do Projeto
 
 ```
-ADA_Elas_Tech-Sistema-Inteligente-de-Compras/
+├── data
+│   ├── raw
+│   └── processed
 │
-├── 📁 notebooks/                  # Análises e exploração de dados
-│   └── (Jupyter Notebooks com EDA, limpeza de dados e modelagem)
+├── notebooks
+│   ├── 01_business_understanding.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 03_data_preparation.ipynb
+│   ├── 04_feature_engineering.ipynb
+│   ├── 05_modeling_baseline.ipynb
+│   ├── 06_modeling_previsao.ipynb
+│   ├── 07_modeling_previsao_por_produto.ipynb
+│   ├── 08_modeling_estoque.ipynb
 │
-├── 📁 app/                        # Aplicação web Streamlit
-│   └── (Código da interface interativa e dashboard)
+├── app
+│   ├── Home.py
+│   ├── pages
+│   │   ├── 2_previsao.py
+│   │   ├── 3_ruptura.py
+│   │   ├── 4_overstock.py
+│   │   └── 5_recomendacoes.py
+│   │
+│   └── utils
+│       └── load_data.py
 │
-├── 📄 requirements.txt            # Dependências do projeto
-├── 📄 .gitignore                  # Arquivos ignorados pelo Git
-└── 📄 README.md                   # Documentação do projeto
+├── requirements.txt
+└── README.md
+
 ```
 
 ---
 
-## 🔬 Notebooks — A Jornada pelos Dados
+## Pipeline do Projeto
 
-A pasta `notebooks/` contém toda a análise desenvolvida ao longo do hackathon, organizada de forma progressiva:
+1️⃣ Business Understanding
 
-### 📊 Análise Exploratória de Dados (EDA)
-- Carregamento e inspeção inicial do dataset
-- Tratamento de valores nulos e inconsistências
-- Estatísticas descritivas (média, mediana, desvio padrão)
-- Distribuição de variáveis numéricas e categóricas
+Definição do problema de negócio e objetivos estratégicos.
 
-### 📈 Visualizações e Insights
-- Gráficos de distribuição de preços por categoria
-- Análise de tendências temporais
-- Identificação de produtos com maior variação de preço
-- Correlações entre variáveis relevantes
+2️⃣ Data Understanding
 
-### 🤖 Modelagem e Inteligência
-- Segmentação e agrupamento de produtos/compras
-- Identificação de padrões de comportamento de compra
-- Geração de métricas de suporte à decisão
+Análise exploratória dos dados (EDA).
+
+3️⃣ Data Preparation
+
+Tratamento de:
+
+- dados faltantes
+- outliers
+- normalização
+- criação da base de demanda
+
+4️⃣ Feature Engineering
+
+Criação de variáveis:
+
+- lags temporais
+- médias móveis
+- features sazonais
+- rolling windows
+
+5️⃣ Modelagem
+
+Benchmark de modelos:
+
+- Linear Regression
+- Random Forest
+- XGBoost
+
+6️⃣ Forecasting
+
+Previsão de demanda por produto e categoria.
+
+7️⃣ Previsão por Produtos e Categoria
+
+Cálculo de:
+
+- ruptura
+- overstock
+- estoque de segurança
+- recomendações automáticas
+
+8️⃣ Previsões para o estoque
+
+- ruptura
+- overstock
+- estoque de segurança
+- recomendações automáticas
+
+9️⃣ app- Dashboard Streamlit
+
+Visualização interativa dos indicadores operacionais.
 
 ---
 
-## 🖥️ Aplicação Web — O Dashboard Interativo
+## Modelos Utilizados
 
-A pasta `app/` contém a aplicação construída com **Streamlit**, que transforma toda a análise em uma experiência interativa e intuitiva.
+| Modelo            | Objetivo                                 |
+| ----------------- | ---------------------------------------- |
+| Linear Regression | Baseline de previsão de demanda          |
+| Random Forest     | Modelo de previsão baseado em ensemble   |
+| XGBoost           | Modelo avançado para previsão de demanda |
 
-### Funcionalidades da aplicação:
-- **Visão geral do painel:** resumo dos principais indicadores
-- **Exploração de produtos:** filtros por categoria, preço e período
-- **Comparação de preços:** análise comparativa entre itens e datas
-- **Recomendações inteligentes:** insights de economia baseados nos dados
-- **Visualizações dinâmicas:** gráficos interativos com Altair e Pydeck
+---
 
-Para executar a aplicação localmente:
+## Métricas Avaliadas
+
+- MAE
+- MSE
+- RMSE
+- R²
+- MAPE
+
+---
+
+## Tecnologias Utilizadas
+
+### Linguagens
+
+- Python
+
+### Bibliotecas
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- xgboost
+- plotly
+- streamlit
+
+---
+
+## Impacto do Projeto
+
+### Impacto Financeiro
+
+- redução de desperdício
+- diminuição de capital parado
+- otimização de compras
+- maior eficiência operacional
+
+### Impacto Ecológico
+
+- redução de desperdício
+- menor descarte de produtos
+- logística mais eficiente
+- consumo mais inteligente
+
+---
+
+## Como Executar o Projeto
+
+## 1️⃣ Download da Base de Dados
+
+O projeto utiliza o dataset público da Olist disponibilizado no Kaggle.
+
+Faça o download da base:
+
+Dataset Olist no Kaggle [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database)
+
+---
+
+### Estrutura esperada
+
+Após o download:
+
+- extraia o arquivo .zip
+- mova o arquivo .sqlite para:
+
+```bash
+data/raw/
+```
+
+---
+
+### Estrutura final
+
+data/
+└── raw/
+└── olist.sqlite
+└── processed/
+
+---
+
+## 2️⃣ Clonar o repositório
 
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/Graciliana/ADA_Elas_Tech-Sistema-Inteligente-de-Compras.git
-cd ADA_Elas_Tech-Sistema-Inteligente-de-Compras
-
-# 2. Instale as dependências
-pip install -r requirements.txt
-
-# 3. Execute a aplicação
-streamlit run app/app.py
 ```
 
-A aplicação ficará disponível em `http://localhost:8501`.
+Ou acesse diretamente:
+
+[Repositório no GitHub](https://github.com/Graciliana/ADA_Elas_Tech-Sistema-Inteligente-de-Compras.git)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia | Versão | Finalidade |
-|---|---|---|
-| **Python** | 3.10+ | Linguagem principal |
-| **Streamlit** | 1.57.0 | Interface web interativa |
-| **Pandas** | 3.0.2 | Manipulação e análise de dados |
-| **NumPy** | 2.4.4 | Operações numéricas |
-| **Altair** | 6.1.0 | Visualizações declarativas |
-| **Pydeck** | 0.9.2 | Visualizações geoespaciais |
-| **Pillow** | 12.2.0 | Processamento de imagens |
-| **PyArrow** | 24.0.0 | Processamento eficiente de dados |
-| **Requests** | 2.33.1 | Requisições HTTP |
-| **Uvicorn** | 0.46.0 | Servidor ASGI |
-
----
-
-## ⚙️ Instalação e Configuração
-
-### Pré-requisitos
-- Python 3.10 ou superior
-- pip (gerenciador de pacotes Python)
-- Git
-
-### Passo a passo
+## 3️⃣ Criar ambiente virtual
 
 ```bash
-# Clone o repositório
-git clone https://github.com/Graciliana/ADA_Elas_Tech-Sistema-Inteligente-de-Compras.git
+python -m venv .venv
 
-# Entre no diretório do projeto
-cd ADA_Elas_Tech-Sistema-Inteligente-de-Compras
+```
 
-# (Recomendado) Crie um ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+## 4️⃣ Ativar ambiente virtual
 
-# Instale todas as dependências
-pip install -r requirements.txt
+### Windows
 
-# Para os notebooks, abra o Jupyter
-jupyter notebook notebooks/
+```bash
+.venv\Scripts\activate
 
-# Para rodar a aplicação
-streamlit run app/app.py
+```
+
+### Linux/Mac
+
+```bash
+source .venv/bin/activate
+
 ```
 
 ---
 
-## 👩‍💻 Time
+## 5️⃣ Instalar dependências
 
-Este projeto foi desenvolvido com muito carinho e dedicação por um grupo de mulheres participantes do programa **ADA Tech · Elas Tech** — uma iniciativa que acredita no poder da tecnologia como ferramenta de transformação e inclusão.
+```bash
+pip install -r requirements.txt
 
-| Nome | GitHub |
-|---|---|
-| _Beatriz_ | — |
-| _Carla Oliveira_ | [@Carla Oliveira](https://github.com/carlaoliveiraads) |— |
-| _Franciele_ | — |
-| Graciliana | [@Graciliana](https://github.com/Graciliana) |
-| _Nivea_ | — |
+```
 
 ---
 
-## 💡 Aprendizados 
+## 6️⃣ Executar os notebooks
+
+```
+├── notebooks
+│   ├── 01_business_understanding.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 03_data_preparation.ipynb
+│   ├── 04_feature_engineering.ipynb
+│   ├── 05_modeling_baseline.ipynb
+│   ├── 06_modeling_previsao.ipynb
+│   ├── 07_modeling_previsao_por_produto.ipynb
+│   ├── 08_modeling_estoque.ipynb
+
+```
+
+## 7️⃣ Executar o dashboard
+
+```
+streamlit run app/Home.py
+```
+
+---
+
+## Resultados Obtidos
+
+O sistema foi capaz de:
+
+✅ prever demanda futura
+✅ identificar produtos críticos
+✅ detectar excesso de estoque
+✅ gerar recomendações inteligentes
+✅ apoiar decisões operacionais
+
+---
+
+## Aprendizados
+
+Durante o desenvolvimento foram aplicados conhecimentos em:
+
+- ciência de dados
+- engenharia de dados
+- machine learning
+- forecasting
+- supply chain analytics
+- visualização de dados
+- engenharia de features
 
 Durante o hackathon, o time enfrentou e superou desafios reais de ciência de dados: desde a limpeza e tratamento de dados sujos até a construção de uma interface funcional e visualmente agradável em tempo limitado.
 
-**O que aprendemos:**
+> **O que aprendemos:**
+
 - A importância de uma boa EDA antes de qualquer modelagem
 - Como o Streamlit acelera a prototipagem de produtos de dados
 - A força do trabalho colaborativo em ciência de dados
 
+---
+
+## Time
+
+Este projeto foi desenvolvido com muito carinho e dedicação por um grupo de mulheres participantes do programa **ADA Tech · Elas Tech** — uma iniciativa que acredita no poder da tecnologia como ferramenta de transformação e inclusão.
+
+| Nome               | GitHub                                                 | Linkedin                                                 |
+| ------------------ | ------------------------------------------------------ | -------------------------------------------------------- |
+| Beatriz Porto      | [@mpbeatriz](https://github.com/mpbeatriz)             | https://www.linkedin.com/in/beatriz-de-m-porto/          |
+| Carla Oliveira     | [@Carla Oliveira](https://github.com/carlaoliveiraads) | https://www.linkedin.com/in/carla-oliveira-ads/          |
+| Franciele Oliveira | [@](https://github.com/Franciele01000110)                                                   | https://www.linkedin.com/in/franciele-oliveira-b02296211 |
+| Graciliana Kascher | [@Graciliana](https://github.com/Graciliana)           | https://www.linkedin.com/in/gracilianakascher/           |
+| Nivea Oliveira     |                                                        | https://www.linkedin.com/in/niveaaoliveira               |
+
+---
 
 ## 📜 Licença
 
 Este projeto foi desenvolvido para fins educacionais no contexto do hackathon ADA Tech · Elas Tech.
 
 ---
+
+## Próximos Passos
+
+- deploy em nuvem
+- integração em tempo real
+- APIs de recomendação
+- alertas automáticos
+- integração com ERP
+- modelos deep learning
 
 <p align="center">
   Feito com 💜 pelo time <strong>Elas Tech</strong> · ADA Tech Hackathon
