@@ -171,7 +171,7 @@ Este projeto foi desenvolvido com muito carinho e dedicação por um grupo de mu
 |---|---|
 | _Beatriz_ | — |
 | _Carla Oliveira_ | [@Carla Oliveira](https://github.com/carlaoliveiraads) |— |
-| _Franciele_ | — |
+| _Franciele_ | — | [@Franciele Oliveira](https://github.com/Franciele01000110) |
 | Graciliana | [@Graciliana](https://github.com/Graciliana) |
 | _Nivea_ | — |
 
